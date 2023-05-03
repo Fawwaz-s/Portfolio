@@ -132,3 +132,4 @@ select avg(column10) from tomer
 select avg(column10) from scriber
 #to get the average of the variables
 ```
+The ride data has been cleaned and aggregated, they are ready to be analysed.
