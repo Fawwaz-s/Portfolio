@@ -133,3 +133,4 @@ select avg(column10) from scriber
 #to get the average of the variables
 ```
 The ride data has been cleaned and aggregated, they are ready to be analysed.
+>Note!, due to the file size limit on github, the meta-data for this dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
