@@ -14,6 +14,8 @@ Cyclistic’s finance analysts have concluded that annual members are much more 
 
 The Director has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. The Director and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends. Ask Three questions will guide the future marketing program:
 
-How do annual members and casual riders use Cyclistic bikes differently?
-Why would casual riders buy Cyclistic annual memberships?
-How can Cyclistic use digital media to influence casual riders to become members?
+> How do annual members and casual riders use Cyclistic bikes differently?
+
+> Why would casual riders buy Cyclistic annual memberships?
+
+> How can Cyclistic use digital media to influence casual riders to become members?
