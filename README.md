@@ -27,11 +27,11 @@ _**Steps**_
 
 Download and unzip the tripdataset from 202004 to 202303, Note.the trip dataset is different from the station_trip dataset, which is from 2013-2020. The tripdataset is a total of 35 dataset, each contains a table of 13 columns and atleast 200,000 rows. Each dataset represents the total trips for each month. We need monthly total ride,total ride by subscriber, mean ride by subscriber, total ride by member, mean ride by member.
 
-##Clean the dataset with spreadsheet
+```Clean the dataset with spreadsheet
 total_monthly_ride =count()
 total_no_subscriber =countif(range,"subscriber")
 total_no_member =countif(range,"member")
 mean_total =average(range)
 mean_subscriber =averageifs(range,range,"subscriber")
 mean_member =averageifs(range,range,"member")
-##The mean values were converted from timestamps to int values after running query
+##The mean values were converted from timestamps to int values after running query ```
