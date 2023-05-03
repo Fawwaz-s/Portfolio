@@ -27,11 +27,46 @@ _**Steps**_
 
 Download and unzip the tripdataset from 202004 to 202303, Note.the trip dataset is different from the station_trip dataset, which is from 2013-2020. The tripdataset is a total of 35 dataset, each contains a table of 13 columns and atleast 200,000 rows. Each dataset represents the total trips for each month. We need monthly total ride,total ride by subscriber, mean ride by subscriber, total ride by member, mean ride by member.
 
-```Clean the dataset with spreadsheet
+```
+Clean the dataset with spreadsheet
 total_monthly_ride =count()
 total_no_subscriber =countif(range,"subscriber")
 total_no_member =countif(range,"member")
 mean_total =average(range)
 mean_subscriber =averageifs(range,range,"subscriber")
 mean_member =averageifs(range,range,"member")
-##The mean values were converted from timestamps to int values after running query ```
+#The mean values were converted from timestamps to int values after running query
+```
+As we proceeded, the datasets became too large to be processed by spreadsheet, I decided to proceed with SQL.
+```
+create table july_time(
+times int,
+statuses varchar(40)
+) #to create a new table
+
+INSERT INTO july_time(times,statuses)
+select datediff(minute, "started_at","ended_at") as timer, member_casual
+from July20 #this query to calculate the time duration of different kind of customers. 
+
+select * from july_time
+
+select avg (times)
+from july_time
+where statuses = 'member' # to get the average time for member
+
+select avg (times)
+from july_time
+where statuses = 'casual' #Vice versa
+
+NOTE! #For december 2020, the average resulted negative average values
+DELETE FROM dec_time WHERE times=''; #to be sure there were no empty or null value
+
+#for Feb2021, the avg causal ride value doesn't correspond with rest of the data.
+#to get a quick overview of this data, it shows many rides had large values.
+select times from feb_time
+where statuses = 'casual'
+
+select time from feb_time
+where statuses = 'casual' and times >300 #rides greater than 5 hours.
+->this returned 120 distinct values, the same was done for values >17 hours = 81
+```
