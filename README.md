@@ -23,7 +23,7 @@ The Director has set a clear goal: Design marketing strategies aimed at converti
 You will use Cyclistic’s historical trip data to analyze and identify trends. Download the previous 12 months of Cyclistic trip data [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 (Note: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable you to answer the business questions. The data has been made available by Motivate International Inc. under this [license](http://https//ride.divvybikes.com/data-license-agreement) This is public data that you can use to explore how different customer types are using Cyclistic bikes. But note that data-privacy issues prohibit you from using riders’ personally identifiable information. This means that you won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 
--**Steps**_
+_**Steps**_
 
 Download and unzip the tripdataset from 202004 to 202303, Note.the trip dataset is different from the station_trip dataset, which is from 2013-2020. The tripdataset is a total of 35 dataset, each contains a table of 13 columns and atleast 200,000 rows. Each dataset represents the total trips for each month. We need monthly total ride,total ride by subscriber, mean ride by subscriber, total ride by member, mean ride by member.
 
