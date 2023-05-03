@@ -70,3 +70,40 @@ select time from feb_time
 where statuses = 'casual' and times >300 #rides greater than 5 hours.
 ->this returned 120 distinct values, the same was done for values >17 hours = 81
 ```
+This contains information on the trip tables.
+
+Metadata for Trips Table: Variables: trip_id: ID attached to each trip taken,starttime: day and time trip started, in CST, stoptime: day and time trip ended, in CST, bikeid: ID attached to each bike, tripduration: time of trip in seconds, from_station_name: name of station where trip originated,to_station_name: name of station where trip terminated, from_station_id: ID of station where trip originated, to_station_id: ID of station where trip terminated, usertype: "Customer" is a rider who purchased a 24-Hour Pass; "Subscriber" is a rider who purchased an Annual Membership,gender: gender of rider,birthyear: birth year of rider
+
+Notes:
+
+Gender and birthday are only available for Subscribers
+The calculated variables will be: year,total ride, trip duration(this will be converted to minutes from seconds),Customer count, Subscriber count, Male count, Female count. Note. birth year data will be collated differently
+
+```
+install.packages("tidyverse")
+install.packages("dyplr")
+library(tidyverse)
+library(dyplr)
+
+custom <- filter( trip13,usertype == "Customer")#to filter just customer variable
+sub <- filter( trip13,usertype == "Subscriber")#to filter just subscriber variable
+
+custom%>%
+  mutate(duration=tripduration/60)->costo 
+sub%>%
+  mutate(duration=tripduration/60)->subs
+trip13%>%
+  mutate(duration=usertype/60)->snap
+ 
+ #to convert durations from seconds to minutes
+
+mean(subs$duration)
+mean(costo$duration)
+mean(snap$duration)
+ #to get the average values
+
+nrow(subs) 
+nrow(costo)
+nrow(trip13)
+#to get the number of rows
+```
