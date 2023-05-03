@@ -94,7 +94,6 @@ sub%>%
   mutate(duration=tripduration/60)->subs
 trip13%>%
   mutate(duration=usertype/60)->snap
- 
  #to convert durations from seconds to minutes
 
 mean(subs$duration)
@@ -106,4 +105,30 @@ nrow(subs)
 nrow(costo)
 nrow(trip13)
 #to get the number of rows
+```
+```
+#a table in the dataset had values in a way that was complicated to compute with R to correct the errors via spreadsheet will be complicated too due to the size of the dataset #I choose to go with SQL instead.
+
+select count(column1) as total_count, avg(column5) as averages from trips
+#to get the overall count and average
+
+select count(column10) from trips where column10 ='Customer'
+select count(column10) from trips where column10 ='Subscriber' 
+#to get count for each client type
+
+select column5 from trips where column10 ='Subscriber'
+select column5 from trips where column10 ='Customer' 
+#to outline the variables for each client type
+
+create table scriber( column10 int ) 
+create table tomer( column10 int )
+#to create a table for each outlined variable
+
+insert into scriber(column10) select column5 from trips where column10 ='Subscriber'
+insert into tomer(column10) select column5 from trips where column10 ='Customer' 
+#To populate new table with values
+
+select avg(column10) from tomer
+select avg(column10) from scriber
+#to get the average of the variables
 ```
