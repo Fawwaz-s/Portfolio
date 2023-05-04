@@ -134,5 +134,6 @@ select avg(column10) from scriber
 ```
 The ride data has been cleaned and aggregated, they are ready to be analysed.
 >Note!, due to the file size limit on github, the meta-data for this dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
 The visualizations for this portofolio can be found [here](https://public.tableau.com/app/profile/fawaz3095/viz/Dash-bike/Dashboard1?publish=yes)
 and [here](https://public.tableau.com/app/profile/fawaz3095/viz/Dash-bike2/Dashboard2?publish=yes)
