@@ -141,7 +141,7 @@ and [here](https://public.tableau.com/app/profile/fawaz3095/viz/Bike_2Dash/Dashb
 **Accessment**
 To answer the business questions asked:
 > How do annual members and casual riders use Cyclistic bikes differently? 
-From the accessment and visualisation, we can see that in the last 10 years, casual or customers spend at least 2X longer time on rides than subscribing members who on average spend about 11 to 15 minutes on rides.
+From the accessment and visualisation, we can see that in the last 10 years, casual or customers spend at least 2X longer time on rides than subscribing members who on average spend about 11 to 20 minutes on rides.
 
 > Why would casual riders buy Cyclistic annual memberships?
 Given that casual riders spend significantly more time on rides compared to members, it may be prudent to consider doing promotion directed at casual users especially during the summer months, the data shows there is a consistent surge over the last 10 years that more people take casual rides compared to the other months. 
